@@ -1,11 +1,12 @@
-import java.util.Arrays;
+import java.util.*;
+import java.util.stream.Collectors;
+
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        int []array = new int[]{2,7, 9,11};
-        int target = 13;
+     Reverse2dArray.reverse2dArray();
 
-        System.out.println(Arrays.toString(TwoSum.twoSum(array, target)));
+
 
     }
 }
