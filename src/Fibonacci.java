@@ -1,5 +1,5 @@
 public class Fibonacci {
-
+   public boolean ans;
     public static int fibonacci(int n){
         //0 1 1 2 3 5
         //base case

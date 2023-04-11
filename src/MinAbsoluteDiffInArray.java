@@ -23,6 +23,7 @@ public class MinAbsoluteDiffInArray {
        for(int i =1; i < n; i++){
          min_diff = Math.min((array[i] - array[i-1]), min_diff);
        }
+
        for(int j =1; j< array.length;j++ ){
            if(array[j]- array[j-1] == min_diff){
                List<Integer>pair = new ArrayList<>();

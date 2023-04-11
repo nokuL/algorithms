@@ -1,11 +1,17 @@
-import java.util.Optional;
+import java.util.concurrent.*;
+import java.util.stream.IntStream;
 
-public class Main {
-    public static void main(String[] args) throws Exception {
-        String string = "aabbbaaccc";
-        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>     " + CompressedString.compressedString(string).orElse("Invalid arguments"));
+
+public class Main  {
+
+
+    public static void main(String[] oars) {
+        System.out.println(StringCompression.compress("aabbccddee"));
     }
+
 }
+
+
 
 
 
