@@ -1,23 +1,29 @@
 import java.util.Arrays;
+import java.util.stream.Stream;
 
 public class ReverseArray {
 
-    public static void reverseArray(){
-        int [] array = new int[]{1,2,3,4,5,6,7};
+    public static int [] reverseArray(int [] array){
+        // program to reverse array in java
+
+        if(array.length == 0){
+            throw new IllegalArgumentException("Invalid array length");
+        }
+
         int start = 0;
         int end = array.length -1;
         int temp = 0;
-        if(array.length < 1){
-            System.out.println("Array too small");
-        }
-        while(start < end){
-            temp = array[start];
-            array[start]= array[end];
-            array[end]= temp;
-            start++;
-            end--;
-        }
 
-        Arrays.stream(array).forEach(System.out::println);
+        while (start <= end){
+            temp = array[end];
+            array[end] = array[start];
+            array[start] = temp;
+            end --;
+            start ++;
+        }
+        Stream.of(array).forEach((character)-> System.out.println(">>>>>>>>>>"+ character) );
+
+        return array;
+
     }
 }
