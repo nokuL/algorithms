@@ -1,4 +1,5 @@
 
+import nodes.Node;
 import sorting.MergeSort;
 
 import java.util.Comparator;
@@ -11,8 +12,8 @@ public class Main  implements Comparator<String>{
  static  double y;
 
     public static final void main(String[]args) {
-        int [] nums = {5,2,3,1};
-        MergeSort.sortArray(nums);
+        Node<String>node = new Node<>("Node 0");
+        node.iterateThoughNodes();
 
 
 
