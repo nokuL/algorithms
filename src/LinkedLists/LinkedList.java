@@ -1,5 +1,8 @@
 package LinkedLists;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LinkedList<T> {
 
     private Node<T> head;
@@ -51,6 +54,51 @@ public class LinkedList<T> {
         }
         output.append("<tail>");
         System.out.println(output);
+    }
+
+    public void swapNodes(LinkedList<T>linkedList , T data1, T data2){
+        Node<T>node1 = linkedList.head;
+        Node<T>node2 = linkedList.head;
+        Node<T>node1Prev = null;
+        Node<T>node2Prev = null;
+
+       Map<String, Node<T>>map1 = findPrevAndNode(linkedList, data1, node1);
+        Map<String, Node<T>>map2 = findPrevAndNode(linkedList, data2, node2);
+        node1 = map1.get("node");
+        node1Prev = map1.get("prev");
+        node2 = map2.get("prev");
+        node2Prev = map2.get("node");
+
+        if(node1Prev == null){
+            this.head = node2;
+
+        }else{
+            node1Prev.setNext(node2);
+        }
+        if(node2Prev == null){
+            this.head = node1;
+        }else{
+            node2Prev.setNext(node1);
+        }
+
+
+    }
+
+    public Map<String, Node<T>>findPrevAndNode(LinkedList<T>linkedList, T data, Node<T>node){
+        Node<T>prev = null;
+        Node<T>node1 = null;
+        while(node.getNext()!=null){
+            if(node.getData() == data){
+                break;
+            }
+            prev = node;
+            node1 = node.getNext();
+
+        }
+        Map<String, Node<T>>newMap = new HashMap<>();
+        newMap.put("prev", prev);
+        newMap.put("node", node1);
+        return newMap;
     }
 
 }
