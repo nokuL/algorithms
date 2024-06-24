@@ -13,35 +13,38 @@ public class LinkedList<T> {
     }
 
     public void addToHead(T data) {
-        Node<T> newHead = new Node<>(data);
-        Node<T> currentHead = this.head;
-        this.head = newHead;
-        if (currentHead != null) {
-            this.head.setNext(currentHead);
-        }
+     Node<T>newHead = new Node<>(data);
+     Node<T>oldHead = this.head;
+     this.head = newHead;
+     if(oldHead!=null){
+         this.head.setNext(oldHead);
+     }
+
     }
 
     public void addToTail(T data) {
-        Node<T> newNode = new Node(data);
-        Node<T> tail = this.head;
-        if (tail == null) {
-            this.head = newNode;
-        } else {
-            while (tail.getNext() != null) {
-                tail = tail.getNext();
-            }
-            tail.setNext(newNode);
-        }
+      Node<T>newNode = new Node<>(data);
+      Node<T>tail = this.head;
+      if(tail == null){
+          this.head = newNode;
+      }else{
+          while(tail.getNext()!=null){
+              tail = tail.getNext();
+          }
+          tail.setNext(newNode);
+
+      }
     }
 
     public T removeHead(){
         if(this.head == null){
             return null;
         }
-        Node<T>removedHead = this.head;
-        this.head = removedHead.getNext();
+        Node<T>nodeToRemove = this.head;
 
-        return removedHead.getData();
+        this.head = nodeToRemove.getNext();
+        return nodeToRemove.getData();
+
 
     }
     public void printList(){
@@ -57,48 +60,70 @@ public class LinkedList<T> {
     }
 
     public void swapNodes(LinkedList<T>linkedList , T data1, T data2){
-        Node<T>node1 = linkedList.head;
-        Node<T>node2 = linkedList.head;
-        Node<T>node1Prev = null;
-        Node<T>node2Prev = null;
+       Node<T>node1 = linkedList.head;
+       Node<T>node2 = linkedList.head;
+       Node<T>prevNode1 = null;
+       Node<T>prevNode2 = null;
 
-       Map<String, Node<T>>map1 = findPrevAndNode(linkedList, data1, node1);
-        Map<String, Node<T>>map2 = findPrevAndNode(linkedList, data2, node2);
-        node1 = map1.get("node");
-        node1Prev = map1.get("prev");
-        node2 = map2.get("prev");
-        node2Prev = map2.get("node");
+       Map<String, Node<T>>map1 = findPrevAndNode(data1, node1 );
+        Map<String, Node<T>>map2 = findPrevAndNode(data2, node2 );
 
-        if(node1Prev == null){
-            this.head = node2;
+        prevNode1 = map1.get("prev");
+       node1 = map1.get("node");
+       prevNode2 = map2.get("prev");
+       node2 = map2.get("node");
 
-        }else{
-            node1Prev.setNext(node2);
-        }
-        if(node2Prev == null){
-            this.head = node1;
-        }else{
-            node2Prev.setNext(node1);
-        }
+       if(prevNode1== null){
+           this.head = node2;
+       }else{
+           prevNode1.setNext(node2);
+       }
+       if(prevNode2==null){
+           this.head = node1;
+       }else{
+           prevNode2.setNext(node1);
+       }
 
 
     }
 
-    public Map<String, Node<T>>findPrevAndNode(LinkedList<T>linkedList, T data, Node<T>node){
-        Node<T>prev = null;
+    private Map<String, Node<T>>findPrevAndNode(T data, Node<T>node){
+        Map<String, Node<T>>map = new HashMap<>();
+        Node<T>prevNode = null;
         Node<T>node1 = null;
         while(node.getNext()!=null){
-            if(node.getData() == data){
+            if(node.getData()==data){
                 break;
             }
-            prev = node;
+            prevNode = node;
             node1 = node.getNext();
 
+
         }
-        Map<String, Node<T>>newMap = new HashMap<>();
-        newMap.put("prev", prev);
-        newMap.put("node", node1);
-        return newMap;
+        map.put("prev", prevNode);
+        map.put("node", node1);
+        return map;
+
+
+    }
+
+    public Node<T> deleteNode(T data) {
+        Node<T> n = this.head;
+        if (n.getData() == data) {
+            this.head = n.getNext(); //moving head if the data is found in the head
+            return n;
+        }
+        //if data is not found in head
+        while (n.getNext() != null) {
+            if (n.getNext().getData() == data) {
+                n.setNext(n.getNext().getNext());
+                return head;
+
+            }
+            n = n.getNext();
+        }
+      return head;
+
     }
 
 }
