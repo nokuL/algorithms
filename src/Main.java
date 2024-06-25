@@ -7,7 +7,8 @@ public class Main  implements Comparator<String>{
  static  double y;
 
     public static final void main(String[]args) {
-
+        int []array = {1, 3, 4, 4, 7};
+      RemoveDupicates.removeDuplicates(array);
 
 
     }
