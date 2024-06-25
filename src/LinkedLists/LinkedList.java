@@ -12,6 +12,10 @@ public class LinkedList<T> {
 
     }
 
+    public Node<T>getHead(){
+        return this.head;
+    }
+
     public void addToHead(T data) {
      Node<T>newHead = new Node<>(data);
      Node<T>oldHead = this.head;
@@ -73,6 +77,13 @@ public class LinkedList<T> {
        prevNode2 = map2.get("prev");
        node2 = map2.get("node");
 
+       if(data1 == null || data2==null){
+           System.out.println("Data is null &&& nothing to swap ");
+           return;
+       }
+
+       //setting next node for prevnodes
+
        if(prevNode1== null){
            this.head = node2;
        }else{
@@ -83,6 +94,12 @@ public class LinkedList<T> {
        }else{
            prevNode2.setNext(node1);
        }
+
+       //setting next node for current nodes
+
+        Node<T>nodeTemp = node1.getNext();
+        node1.setNext(node2.getNext());
+        node2.setNext(nodeTemp);
 
 
     }
