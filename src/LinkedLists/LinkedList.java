@@ -126,22 +126,50 @@ public class LinkedList<T> {
 
     public Node<T> deleteNode(T data) {
         Node<T> n = this.head;
-        if (n.getData() == data) {
+        if(n == null){
+            return null;
+        }
+        if (n.getData().equals(data)) {
             this.head = n.getNext(); //moving head if the data is found in the head
             return n;
         }
         //if data is not found in head
-        while (n.getNext() != null) {
-            if (n.getNext().getData() == data) {
+        while (n != null) {
+            if (n.getNext().getData().equals(data)) {
                 n.setNext(n.getNext().getNext());
-                return head;
+                return n.getNext();
 
             }
             n = n.getNext();
         }
-      return head;
+      return null;
 
     }
+    public Node<T>deleteNodeAtPosition(int position){
+        int count = 0;
+        Node<T>currentNode = this.head;
+        Node<T>prevNode = null;
+        while(currentNode != null && count < position){
+            prevNode = currentNode;
+            count++;
+            currentNode = currentNode.getNext();
 
-}
+            }
+        if(currentNode != null){
+            if(prevNode == null){
+                this.head = currentNode.getNext();
+
+            }else{
+                prevNode.setNext(currentNode.getNext());
+                currentNode.setNext(null);
+
+            }
+
+        }
+         return null;
+
+        }
+    }
+
+
 
