@@ -107,18 +107,16 @@ public class LinkedList<T> {
     private Map<String, Node<T>>findPrevAndNode(T data, Node<T>node){
         Map<String, Node<T>>map = new HashMap<>();
         Node<T>prevNode = null;
-        Node<T>node1 = null;
-        while(node.getNext()!=null){
+        while(node!=null){
             if(node.getData()==data){
                 break;
             }
             prevNode = node;
-            node1 = node.getNext();
-
+            node = node.getNext();
 
         }
         map.put("prev", prevNode);
-        map.put("node", node1);
+        map.put("node", node);
         return map;
 
 
@@ -130,10 +128,9 @@ public class LinkedList<T> {
             return null;
         }
         if (n.getData().equals(data)) {
-            this.head = n.getNext(); //moving head if the data is found in the head
+            this.head = n.getNext();
             return n;
         }
-        //if data is not found in head
         while (n != null) {
             if (n.getNext().getData().equals(data)) {
                 n.setNext(n.getNext().getNext());
@@ -143,7 +140,6 @@ public class LinkedList<T> {
             n = n.getNext();
         }
       return null;
-
     }
     public Node<T>deleteNodeAtPosition(int position){
         int count = 0;

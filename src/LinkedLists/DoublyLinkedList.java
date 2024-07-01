@@ -15,7 +15,7 @@ public class DoublyLinkedList <T>{
 
         this.head = newNode;
 
-        if(tail == null){
+        if(this.tail == null){
             this.tail = newNode;
         }else{
             newNode.setNext(oldHead);
