@@ -1,4 +1,4 @@
-package LinkedLists;
+package LinearAlgs;
 
 import java.util.HashSet;
 

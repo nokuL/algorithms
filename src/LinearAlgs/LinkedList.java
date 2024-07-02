@@ -1,4 +1,4 @@
-package LinkedLists;
+package LinearAlgs;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,27 +17,28 @@ public class LinkedList<T> {
     }
 
     public void addToHead(T data) {
-     Node<T>newHead = new Node<>(data);
-     Node<T>oldHead = this.head;
-     this.head = newHead;
-     if(oldHead!=null){
-         this.head.setNext(oldHead);
-     }
-
+            Node<T> newNode = new Node<>(data);
+        Node<T>oldHead = this.head;
+        this.head = newNode;
+        if(oldHead!=null){
+            this.head.setNext(oldHead);
+        }
     }
 
     public void addToTail(T data) {
-      Node<T>newNode = new Node<>(data);
-      Node<T>tail = this.head;
-      if(tail == null){
-          this.head = newNode;
-      }else{
-          while(tail.getNext()!=null){
-              tail = tail.getNext();
-          }
-          tail.setNext(newNode);
+     Node<T> newNode = new Node<>(data);
+     Node<T> tail = this.head;
+     if(tail == null){
+         this.head = newNode;
+     }else{
+         while(tail.getNext()!=null){
+             tail = tail.getNext();
+         }
+         tail.setNext(newNode);
 
-      }
+     }
+
+
     }
 
     public T removeHead(){
@@ -51,6 +52,7 @@ public class LinkedList<T> {
 
 
     }
+
     public void printList(){
         Node<T>currentNode = this.head;
         StringBuilder output = new StringBuilder();

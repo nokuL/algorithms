@@ -1,4 +1,4 @@
-package LinkedLists;
+package LinearAlgs;
 
 public class FindMiddleNode<T> {
 
