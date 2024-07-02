@@ -13,6 +13,12 @@ public class Node<T> {
         this.previous = null;
     }
 
+    public Node(){
+        this.data = null;
+        this.next = null;
+
+    }
+
     public void setData(T data){
         this.data = data;
     }
