@@ -9,6 +9,10 @@ public class DoublyLinkedList <T>{
      this.head = null;
      this.tail = null;
     }
+    public Node<T>getHead(){
+        return this.getHead();
+    }
+
    public void addToHead(T data){
         Node<T>newNode = new Node<>(data);
         Node<T>oldHead = this.head;
