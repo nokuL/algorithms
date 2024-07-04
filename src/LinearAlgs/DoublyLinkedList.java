@@ -103,7 +103,7 @@ public class DoublyLinkedList <T>{
           }
       }
 
-    return null;
+    return currentNode;
 
    }
 
@@ -123,7 +123,7 @@ public class DoublyLinkedList <T>{
    }
    private Node<T> findNode(LinkedList<T>linkedList, T data){
         Node<T>current = linkedList.getHead();
-        while(current.getNext() !=null){
+        while(current !=null){
             if(current.getData() == data){
                 return current;
             }
