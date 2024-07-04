@@ -84,21 +84,24 @@ public class DoublyLinkedList <T>{
             return null;
         }
 
-        while(currentNode!=null){
-            if(count == position){
-                if(previousNode!=null){
-                    previousNode.setNext(currentNode.getNext());
-                }
-                currentNode.getNext().setPrevious(currentNode.getPrevious());
-                currentNode.setNext(null);
-                currentNode.setPrevious(null);
-                return currentNode;
-
-            }
-            previousNode = currentNode;
-            currentNode = currentNode.getNext();
-            count++;
-        }
+      while(currentNode!=null){
+          if(count==position){
+              break;
+          }
+          previousNode = currentNode;
+          currentNode = currentNode.getNext();
+          count++;
+          if(previousNode!=null){
+              previousNode.setNext(currentNode.getNext());
+          }else{
+              this.head = currentNode.getNext();
+          }
+          if(currentNode.getNext()!=null){
+              currentNode.getNext().setPrevious(previousNode);
+          }else{
+              this.tail = currentNode.getNext();
+          }
+      }
 
     return null;
 
