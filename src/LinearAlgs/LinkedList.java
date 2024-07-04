@@ -125,6 +125,7 @@ public class LinkedList<T> {
     }
 
     public Node<T> deleteNode(T data) {
+        Node<T>prev = null;
         Node<T> n = this.head;
         if(n == null){
             return null;
@@ -134,12 +135,13 @@ public class LinkedList<T> {
             return n;
         }
         while (n != null) {
-            if (n.getNext().getData().equals(data)) {
-                n.setNext(n.getNext().getNext());
-                return n.getNext();
-
+            if(n.getData().equals(data) && (prev!=null)){
+                    prev.setNext(n.getNext());
+                    n.setNext(null);
             }
+            prev = n;
             n = n.getNext();
+
         }
       return null;
     }

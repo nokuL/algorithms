@@ -90,6 +90,8 @@ public class DoublyLinkedList <T>{
                     previousNode.setNext(currentNode.getNext());
                 }
                 currentNode.getNext().setPrevious(currentNode.getPrevious());
+                currentNode.setNext(null);
+                currentNode.setPrevious(null);
                 return currentNode;
 
             }
