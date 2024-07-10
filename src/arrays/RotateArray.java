@@ -8,7 +8,12 @@ public class RotateArray {
         //split from d to array.length -1
         //reverse 1st part
         //reverse 2nd part
-        //reverse the whole array
+        //reverse the whole arrayargt
+
+
+        if(array==null || array.length == 0){
+            throw new IllegalArgumentException("Invalid array length");
+        }
 
         d %= array.length;
 
