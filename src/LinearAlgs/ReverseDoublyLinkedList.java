@@ -1,7 +1,6 @@
 package LinearAlgs;
 
 public class ReverseDoublyLinkedList <T>{
-
     public Node<T>reverseDoublyLinkedList(DoublyLinkedList<T>doublyLinkedList){
         Node<T>prev = null;
         Node<T>current = doublyLinkedList.getHead();

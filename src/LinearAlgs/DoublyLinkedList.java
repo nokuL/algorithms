@@ -91,17 +91,18 @@ public class DoublyLinkedList <T>{
           previousNode = currentNode;
           currentNode = currentNode.getNext();
           count++;
-          if(previousNode!=null){
-              previousNode.setNext(currentNode.getNext());
-          }else{
-              this.head = currentNode.getNext();
-          }
-          if(currentNode.getNext()!=null){
-              currentNode.getNext().setPrevious(previousNode);
-          }else{
-              this.tail = currentNode.getNext();
-          }
+
       }
+       if(previousNode!=null){
+           previousNode.setNext(currentNode.getNext());
+       }else{
+           this.head = currentNode.getNext();
+       }
+       if(currentNode.getNext()!=null){
+           currentNode.getNext().setPrevious(previousNode);
+       }else{
+           this.tail = currentNode.getNext();
+       }
 
     return currentNode;
 

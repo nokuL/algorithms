@@ -9,8 +9,12 @@ public class DeleteDupsFromLinkedList<T> {
         Node<T> currentNode = linkedList.getHead();
         Node<T> prevNode = null;
 
+        if(currentNode == null){
+            return;
+        }
+
         while(currentNode.getNext()!=null){
-            if(hashSet.contains(currentNode.getData())){
+            if(hashSet.contains(currentNode)){
                 try{
                     prevNode.setNext(currentNode.getNext());
 
