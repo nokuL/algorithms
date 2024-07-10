@@ -2,7 +2,7 @@ package arrays;
 
 public class RotateArray {
 
-    public int[] rotateArray(int[] array, int d) {
+    public static int[] rotateArray(int[] array, int d) {
         //first split the array into 2
         //split from zero to d-1
         //split from d to array.length -1
@@ -21,7 +21,7 @@ public class RotateArray {
 
     }
 
-    private int[] reverseArray(int[] array, int start, int end) {
+    private static int[] reverseArray(int[] array, int start, int end) {
         //reverseing and array
         //have two pointers i.e left and right
         //left starts from start , right starts from end
