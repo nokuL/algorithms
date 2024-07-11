@@ -1,9 +1,9 @@
 package arrays;
 
-public class RotateArrayTestData {
+public class ArrayTestData {
 
     public static int [] getValidArray(){
-        return  new int[]{1, 2,3, 4, 4, 6};
+        return  new int[]{1, 2,3, 4, 5, 6};
     }
 
     public static int[]getNullArray(){
@@ -14,6 +14,6 @@ public class RotateArrayTestData {
     }
 
     public static int[]getValidReversedArray(){
-        return new int[]{3, 4,4,6, 1,2};
+        return new int[]{3, 4,5,6, 1,2};
     }
 }

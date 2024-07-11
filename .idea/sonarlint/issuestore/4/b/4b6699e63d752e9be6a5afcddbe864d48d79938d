@@ -1,0 +1,13 @@
+
+c
+java:S1104
+"MMake f a static final constant or non-public and provide accessors if needed.(œ§ÐÜ
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ëþáó
+C
+java:S1172"(Remove this unused method parameter "h".(êœ¸²ýÿÿÿÿ
+A
+java:S1481"&Remove this unused "i" local variable.(ùó›Ìøÿÿÿÿ
+;
+java:S1068"%Remove this unused "c" private field.(Ëþáó
+@
+java:S1068"%Remove this unused "g" private field.(œ›ŒÜøÿÿÿÿ

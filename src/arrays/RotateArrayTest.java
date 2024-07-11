@@ -16,23 +16,30 @@ class RotateArrayTest {
 
     @Test
     public void testRotateValidArray(){
-        int []array = RotateArrayTestData.getValidArray();
-        int [] expected = RotateArrayTestData.getValidReversedArray();
+        int []array = ArrayTestData.getValidArray();
+        int [] expected = ArrayTestData.getValidReversedArray();
         assertArrayEquals(expected, RotateArray.rotateArray(array, d));
 
     }
 
     @Test
     public void testInvalidArray(){
-        int [] array = RotateArrayTestData.getEmptyArray();
+        int [] array = ArrayTestData.getEmptyArray();
         assertThrows(IllegalArgumentException.class, ()->RotateArray.rotateArray(array, d));
 
     }
 
     @Test
     public void testNullArray(){
-        int [] array = RotateArrayTestData.getNullArray();
+        int [] array = ArrayTestData.getNullArray();
         assertThrows(IllegalArgumentException.class, ()->RotateArray.rotateArray(array, d));
+    }
+
+    @Test
+    public void testArrayWithFullRotation(){
+        int [] array = ArrayTestData.getValidArray();
+        int [] expected = ArrayTestData.getValidArray();
+        assertArrayEquals(expected, RotateArray.rotateArray(array, array.length));
     }
 
 }

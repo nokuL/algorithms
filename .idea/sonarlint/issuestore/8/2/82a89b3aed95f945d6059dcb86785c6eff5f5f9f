@@ -1,0 +1,7 @@
+
+0
+java:S1220""Move this file to a named package.
+O
+java:S1118":Add a private constructor to hide the implicit public one.(Ò±ç
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(Ç¹Š•ùÿÿÿÿ
