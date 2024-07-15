@@ -1,11 +1,0 @@
-
-o	java:S100
-"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äãĞÇùÿÿÿÿ8ÿë²şÌ1
-N
-java:S1602",Remove useless curly braces around statement(¦Øÿÿÿÿÿ8€ì²şÌ1
-o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öˆÙÆøÿÿÿÿ8ì²şÌ1
-i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã•u8ì²şÌ1
-j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉÂ‹×8‚ì²şÌ1
-o	java:S100&"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äü˜´ûÿÿÿÿ8¹ï¶şÌ1
-M
-java:S5960"+Remove this assertion from production code.(¦Øÿÿÿÿÿ8ƒì²şÌ1

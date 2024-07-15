@@ -41,6 +41,19 @@ public class LinkedList<T> {
 
     }
 
+    public Node<T> getTail() {
+        if (head == null) {
+            return null; // List is empty
+        }
+
+        Node<T> current = head;
+        while (current != null && current.getNext() != null) {
+            current = current.getNext();
+        }
+        return current; // Returns the last node
+    }
+
+
     public T removeHead(){
         if(this.head == null){
             return null;

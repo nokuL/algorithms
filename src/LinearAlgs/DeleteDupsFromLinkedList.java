@@ -13,7 +13,7 @@ public class DeleteDupsFromLinkedList<T> {
             return;
         }
 
-        while(currentNode.getNext()!=null){
+        while(currentNode!=null){
             if(hashSet.contains(currentNode)){
                 try{
                     prevNode.setNext(currentNode.getNext());
