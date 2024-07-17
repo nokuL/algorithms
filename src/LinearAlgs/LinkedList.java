@@ -186,6 +186,17 @@ public class LinkedList<T> {
          return null;
 
         }
+
+        public Node<T>findNodeByData(T data){
+        Node<T>curr = this.head;
+        while(curr!=null){
+            if(curr.getData() == data){
+                return  curr;
+            }
+            curr = curr.getNext();
+        }
+        return null;
+        }
     }
 
 
