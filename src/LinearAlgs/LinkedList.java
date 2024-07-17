@@ -12,6 +12,10 @@ public class LinkedList<T> {
 
     }
 
+    public void setHead(Node<T> head) {
+        this.head = head;
+    }
+
     public Node<T>getHead(){
         return this.head;
     }
