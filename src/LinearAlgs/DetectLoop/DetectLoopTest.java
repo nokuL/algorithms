@@ -17,7 +17,14 @@ public class DetectLoopTest {
     @Test
     public void testValid(){
         LinkedList<Integer>linkedList = DetectLoopTestData.getValidList();
-        Assertions.assertTrue(detectLoop.detectLoop(linkedList));
+        Assertions.assertEquals(3, detectLoop.deteactLoop(linkedList));
 
     }
+
+    @Test
+    public void testInvalid(){
+        LinkedList<Integer>linkedList = DetectLoopTestData.getInvalidList();
+        Assertions.assertEquals(0, detectLoop.deteactLoop(linkedList));
+    }
+
 }
