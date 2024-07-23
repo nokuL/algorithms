@@ -38,8 +38,6 @@ O
 src/MinAbsoluteDiffInArray.java,a/b/ab87383ac9671ddce3892eca45ff1ce9acba427e
 F
 src/MoveZeroToEnd.java,9/f/9f3e1d3beb6d9c57fc3d036fcc0c90a804dcfc1e
-I
-src/MaxAndMinInArray.java,7/3/737490640399277f974a51489424fc6f127c2f09
 T
 $src/ReverseStringUsingRecursion.java,3/9/393f3a07b6ebba15bbf43d07bbc8dde4921ad9e2
 F

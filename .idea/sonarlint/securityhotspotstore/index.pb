@@ -34,8 +34,6 @@ G
 src/StringRotation.java,5/5/55f64cdf31284dd53de687d3befd4428b63e68f1
 M
 src/MergeTwoSortedArrays.java,5/9/5931f74dd21b3d1265ee2ba7144facc91918a62a
-I
-src/MaxAndMinInArray.java,7/3/737490640399277f974a51489424fc6f127c2f09
 O
 src/MinAbsoluteDiffInArray.java,a/b/ab87383ac9671ddce3892eca45ff1ce9acba427e
 F
