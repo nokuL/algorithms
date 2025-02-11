@@ -58,8 +58,6 @@ Q
 src/Main.java,9/2/924f089edb4af5ee45c8a9d1129cd28e2b368138
 B
 src/PoliceBox.java,a/f/aff24291249c33c7627376ba602e64dee948f036
-C
-src/TwoSumTest.java,3/b/3bfe85becabce1de4217cb0a1cc3654e7575249b
 Å
 Q.idea/sonarlint/securityhotspotstore/8/2/8211bbc48fa2456a94f0677679121ccc472b922e,8/2/823f202ae2dee365cb00b228b8e144846f0d7971
 Å
